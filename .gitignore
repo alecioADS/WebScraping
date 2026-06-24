@@ -1,0 +1,28 @@
+# Ambiente virtual Python
+venv/
+env/
+.env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Saídas geradas pelo script
+*.xlsx
+*.csv
+*.json
+
+# Configurações de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude Code
+.claude/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
