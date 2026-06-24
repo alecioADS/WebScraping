@@ -47,6 +47,10 @@ from selenium.webdriver.support.ui import WebDriverWait      # Espera explícita
 # Gerencia o download e atualização automática do ChromeDriver
 from webdriver_manager.chrome import ChromeDriverManager
 
+# ╔══════════════════════════════════════════════════════════════════╗
+# ║  CENA 3 — Fontes e configuração: mostrar estas constantes aqui  ║
+# ╚══════════════════════════════════════════════════════════════════╝
+
 # ──────────────────────────────────────────────
 # CONSTANTES DE CONFIGURAÇÃO
 # ──────────────────────────────────────────────
@@ -85,6 +89,10 @@ USER_AGENT_WIN = (
 # ──────────────────────────────────────────────
 # FUNÇÕES AUXILIARES — DRIVER E DETECÇÃO
 # ──────────────────────────────────────────────
+
+# ╔══════════════════════════════════════════════════════════════════════════╗
+# ║  CENA 6 — Anti-bloqueio (parte 1): mostrar pagina_bloqueada() abaixo   ║
+# ╚══════════════════════════════════════════════════════════════════════════╝
 
 def iniciar_driver(stealth: bool = False, headless: bool = False) -> WebDriver:
     """
@@ -177,6 +185,10 @@ def pagina_bloqueada(driver: WebDriver) -> bool:
         # Se não conseguiu verificar a página, assume bloqueio por segurança
         return True
 
+
+# ╔══════════════════════════════════════════════════════════════════════════╗
+# ║  CENA 4 — Filtro de preço: explicar limpar_preco() e preco_valido()    ║
+# ╚══════════════════════════════════════════════════════════════════════════╝
 
 # ──────────────────────────────────────────────
 # FUNÇÕES AUXILIARES — PREÇO E DADOS
@@ -372,6 +384,10 @@ def remover_duplicados(produtos: list[dict]) -> list[dict]:
     return unicos
 
 
+# ╔══════════════════════════════════════════════════════════════════════════╗
+# ║  CENA 5 — Paginação e coleta: explicar o loop e o WebDriverWait aqui   ║
+# ╚══════════════════════════════════════════════════════════════════════════╝
+
 # ──────────────────────────────────────────────
 # FUNÇÕES DE COLETA — MERCADO LIVRE
 # ──────────────────────────────────────────────
@@ -557,6 +573,10 @@ def coletar_mercado_livre_busca(driver: WebDriver, limite: int, termos: list[str
 
     return produtos
 
+
+# ╔══════════════════════════════════════════════════════════════════════════╗
+# ║  CENA 6 — Anti-bloqueio (parte 2): cadeia de fallback em coletar_fonte2 ║
+# ╚══════════════════════════════════════════════════════════════════════════╝
 
 # ──────────────────────────────────────────────
 # FUNÇÕES DE COLETA — FONTE 2 (Amazon + Fallbacks)
@@ -875,6 +895,10 @@ def coletar_fonte2(limite: int) -> list[dict]:
 
     return produtos
 
+
+# ╔════════════════════════════════════════════════════════════════════════════╗
+# ║  CENA 7 — Exportação: mostrar exportar_excel() e o finally em main()     ║
+# ╚════════════════════════════════════════════════════════════════════════════╝
 
 # ──────────────────────────────────────────────
 # FUNÇÕES DE SAÍDA — EXCEL E RESUMO
