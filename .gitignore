@@ -1,23 +1,20 @@
-# Ambiente virtual Python
-venv/
-env/
-.env/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
+# Configurações de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
 
 # Saídas geradas pelo script
 *.xlsx
 *.csv
 *.json
 
-# Configurações de IDE
-.vscode/
-.idea/
-*.swp
-*.swo
+# Cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
 
 # Claude Code
 .claude/
@@ -26,3 +23,6 @@ __pycache__/
 .DS_Store
 .AppleDouble
 .LSOverride
+
+# Arquivo de especificação interno (não enviar ao professor)
+prompt_web_scraping_selenium.md
